@@ -63,7 +63,7 @@ typedef struct lista_ligada{        /* Estrutura para lista */
 } LISTA;                            /* Define um tipo de "variável" para a lista */
 
 /**************************
-*  PROTÓTIPOS DE FUNÇÕE   *
+*  PROTÓTIPOS DE FUNÇÕES  *
 ***************************/
 
 bool validacao_abertura_ficheiro(FILE * f_entrada, char nome_f[]);
