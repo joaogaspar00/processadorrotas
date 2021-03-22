@@ -25,7 +25,7 @@ Os ficheiro têm de ser definidos tal como previsto. Qualquer má formatação d
   3. rotas_processadas.txt - ficheiro final com as distâncias entre as diveresas localidades
 
 # Disclaimer
-Estre projeto é a minha resolução de um trabalho no âmbito da cadeira de programação do curso LEE-IST, por isso deixo as seguintes notas:
+Estre projeto é a minha resolução de um trabalho no âmbito da cadeira de programação do curso LEE-IST, com o intuíto de ajudar na compreensaão do probelma. Deixo as seguintes notas:
   1. Embora estre trabalho esteja aberto ao público para download, este trabalho é uma possível resolução de um trabalho académico. Já mais pode ser copiado ou até mesmo utilizado para fins de avaliação. 
   2. É possível existirem erros e partes ainda incompletas.
   3. Não foi avaliado nem aprovado por ninguém, por isso não pode ser levado como apoio único para o projeto
