@@ -4,7 +4,7 @@ Desenvolver um program em C, norma ansi, com a finalidade de calcular distância
 Para mais informação consultar o enunciado do trabalho
 
 # Lógica do programa
-O programa foi desenvolvido seguindo a lógica de processamento dos ficheiro.
+O programa foi desenvolvido seguindo a lógica de processamento dos ficheiros.
   1. Leitura dos dados das localidades implementando uma lista simplesmente ligada como estrutura de dados apra guardar a informação (nome, latitude e longitude).
   2. Processamento das rotas. Para tal abordou-se rota a rota tirando partido da estrutura pela qual estão descritas as rotas. É preciso considerar que à medida que vamos avançando na rota é necessário definir como ponto de referência a localidade anterior àquela a ser processada.
 
