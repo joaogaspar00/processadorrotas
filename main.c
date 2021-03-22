@@ -37,7 +37,7 @@
 #include <stdlib.h>     /* Biblioteca de propósito geral padrão da linguagem de programação C */
 #include <string.h>     /* Biblioteca com várias funções para manipulação de arrays com caracteres - "strings" */
 #include <stdbool.h>    /* Definie um novo tipo de váriaval - "bool". Contém recursos para manipular variáveis lógicas, verdadeiro e falso*/
-#include <math.h>       /* */
+#include <math.h>       /* Biblioteca com funções matemáticas necessárias: funções seno e cosseno */
 
 /**************************
 *         DEFINES         *
