@@ -15,7 +15,7 @@
 * 	estão guardadas num ficheiro de texto (base de dados) cujo nome é 	  
 * 	localidades.txt. As rotas são especificadas num ficheiro de texto     
 * 	(rotas.txt) que o programa deverá processar. 						  
-*																			  
+*																		  
 *******************************************************************************
 * VERSÕES:																	  
 *	- 1º Versão: 21-03-2021 - programa a funcionar sem qualquer tipo de erros,
