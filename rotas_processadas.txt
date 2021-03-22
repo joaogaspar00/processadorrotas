@@ -1,0 +1,29 @@
+#ROTA 1
+Lisboa 0.00 km
+Coimbra 174.46 km
+Porto 279.92 km
+
+#ROTA 2
+Lisboa 0.00 km
+Coimbra 174.46 km
+Porto 279.92 km
+Viana_do_Castelo 343.86 km
+Lisboa 673.93 km
+
+#ROTA 3
+Portalegre 0.00 km
+Porto 227.06 km
+Braganca 397.40 km
+
+#ROTA 4
+Setubal 0.00 km
+Funchal 995.17 km
+Ponta_Delgada 1949.04 km
+Viana_do_Castelo 3395.70 km
+Beja 3812.37 km
+
+#ROTA 5
+Faro 0.00 km
+Santarem 255.34 km
+Evora 356.39 km
+Beja 415.73 km

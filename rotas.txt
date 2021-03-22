@@ -1,0 +1,29 @@
+#ROTA 1
+Lisboa
+Coimbra
+Porto
+
+#ROTA 2
+Lisboa
+Coimbra
+Porto
+Viana_do_Castelo
+Lisboa
+
+#ROTA 3
+Portalegre
+Porto
+Braganca
+
+#ROTA 4
+Setubal
+Funchal
+Ponta_Delgada
+Viana_do_Castelo
+Beja
+
+#ROTA 5
+Faro
+Santarem
+Evora
+Beja
