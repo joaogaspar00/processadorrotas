@@ -1,5 +1,5 @@
 /******************************************************************************
-* Data: 21 de março de 2021 Ano letivo: 2020/2021   LEE - IST *
+* Data: 21 de março de 2021     Ano letivo: 2020/2021   LEE - IST *
 *																			  
 * Projeto: 1º Trabalho de programação 	Professor: Bertinho D'Andrade         
 * 																			  
