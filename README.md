@@ -14,3 +14,7 @@ A distância foi calculada por uma aproximação simplificada da expressão onde
   2. y = R * tan(lon - lon_0)
 
 Para se aplicar estas fórmuals foi preciso converter de graus para radianos as longitudes e latitudes
+
+#Ficheiros complementares
+Os ficheiro têm de ser definidos tal como previsto. Qualquer má formatação dos mesmos irá implicar erros no seu processamento.
+O trabalho não prevê a identificação dos erros e, assim sendo, não foi implementado nenhum algortimo para os detectar.
