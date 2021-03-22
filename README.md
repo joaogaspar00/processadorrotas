@@ -12,6 +12,5 @@ O programa foi desenvolvido seguindo a lógica de processamento dos ficheiro.
 A distância foi calculada por uma aproximação simplificada da expressão onde se considera um sistema de eixos xy. Considera-se então um deslocamento segundo x outro segundo y. A distância é portanto dada pela raiz quadrada da soma dos quadrados dos deslocamentos segundo cada eixo. Considere-se que um ponto de referência tem longitude "lon_0" e latitude "lat_0" e um ponto perto da referência longitude "lon" e latitude "lat"
   1. x = R * cos(lon) sen(lat - lat_0) 
   2. y = R * tan(lon - lon_0)
+
 Para se aplicar estas fórmuals foi preciso converter de graus para radianos as longitudes e latitudes
-
-
