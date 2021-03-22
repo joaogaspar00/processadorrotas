@@ -6,7 +6,7 @@ Para mais informação consultar o enunciado do trabalho
 # Lógica do programa
 O programa foi desenvolvido seguindo a lógica de processamento dos ficheiro.
   1. Leitura dos dados das localidades implementando uma lista simplesmente ligada como estrutura de dados apra guardar a informação (nome, latitude e longitude).
-  2. Processamento das rotas. Para tal abordou-se rota a rota tirando partido da estrutura pela qual estão descritas as rotas.
+  2. Processamento das rotas. Para tal abordou-se rota a rota tirando partido da estrutura pela qual estão descritas as rotas. É preciso considerar que à medida que vamos avançando na rota é necessário definir como ponto de referência a localidade anterior àquela a ser processada.
 
 # Operações matemáticas essenciais
 A distância foi calculada por uma aproximação simplificada da expressão onde se considera um sistema de eixos xy. Considera-se então um deslocamento segundo x outro segundo y. A distância é portanto dada pela raiz quadrada da soma dos quadrados dos deslocamentos segundo cada eixo. Considere-se que um ponto de referência tem longitude "lon_0" e latitude "lat_0" e um ponto perto da referência longitude "lon" e latitude "lat"
@@ -17,3 +17,6 @@ Para se aplicar estas fórmuals foi preciso converter de graus para radianos as 
 
 # Ficheiros complementares
 Os ficheiro têm de ser definidos tal como previsto. Qualquer má formatação dos mesmos irá implicar erros no seu processamento. O trabalho não prevê a identificação dos erros e, assim sendo, não foi implementado nenhum algortimo para os detectar.
+  1. localidades.txt - contêm a informação relativa ao conjunto de localidades
+  2. rotas.txt - ficheiro com as rotas a serem processadas
+  3. rotas_processadas.txt - ficheiro final com as distâncias entre as diveresas localidades
