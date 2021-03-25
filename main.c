@@ -65,7 +65,7 @@ typedef struct lista_ligada{        /* Estrutura para lista */
 /**************************
 *  PROTÓTIPOS DE FUNÇÕES  *
 ***************************/
-
+void heading();
 bool validacao_abertura_ficheiro(FILE * f_entrada, char nome_f[]);
 void processamento_rota(LISTA * dados_uteis);
 float processamento_distancia(LISTA * dados_uteis, char referencia[], char leitura[]);
@@ -89,7 +89,7 @@ int main(){
 
     #ifdef DEBUG
         heading();
-    #endif // DEBUG
+    #endif
 
     dados_uteis = leitura_dados_uteis();                    /* Leitura dos dados do ficheiro "localidades.txt" */
 
@@ -99,14 +99,14 @@ int main(){
     #ifdef DEBUG
         print_dados_uteis(dados_uteis);                     /* Debbug: mostrar o dados lidos */
         printf("\n");
-    #endif // DEBUG
+    #endif
 
     processamento_rota(dados_uteis);                        /* Função principal, invoca a função para processar as rotas */
 
     #ifdef DEBUG
         printf("\n\nPrimir uma tecla para sair...");        /* Para não fechar a linha de comandos automáticamentes */
         getchar();
-    #endif // DEBUG
+    #endif
 
     printf("\n>> Exit application (0) - success\n");        /* Aviso de execução sem erros */
     return 0;
@@ -137,13 +137,13 @@ void heading(){
 bool validacao_abertura_ficheiro(FILE * f_entrada, char nome_f[]){
     if(f_entrada == NULL){                                              /* Verifica a validade da abertura do ficheiro */
         #ifdef DEBUG
-            printf(">> Abertura do ficheiro %s com erros\n", nome_f);
-        #endif // DEBUG
+            printf(">> Abertura do ficheiro %s // DEBUG com erros\n", nome_f);
+        #endif
         return false;                                                   /* Retorna "false" em caso de erro na abertura */
     }
     #ifdef DEBUG
         printf(">> Abertura correta do ficheiro %s\n", nome_f);
-     #endif // DEBUG
+     #endif
     return true;                                                        /* Retorna "true" em caso positivo na abertura do ficheiro */
 }
 /**********************************************************************************/
@@ -182,7 +182,7 @@ void processamento_rota(LISTA * dados_uteis){
         printf("********************************************\n");
         printf("* Segundo passo - processamento das rotas  *\n");
         printf("********************************************\n\n");
-    #endif // DEBUG
+    #endif
 
     f_entrada = fopen(nome_f1, "r");                                        /* Aberutra do ficheiro de entrada */
     f_saida = fopen(nome_f2, "w");                                          /* Aberutra do ficheiro de saída */
@@ -197,7 +197,7 @@ void processamento_rota(LISTA * dados_uteis){
     }
     #ifdef DEBUG
         printf(">> Inicio do processamento de rotas");
-    #endif // DEBUG
+    #endif
     while(1){                                                               /* Leitura do ficheiro linha a linha infinitamene*/
         fgets(leitura, 30, f_entrada);                                      /* Leitura de uma linha ficheiro para processamento */
 
@@ -208,7 +208,7 @@ void processamento_rota(LISTA * dados_uteis){
             print_string(f_saida, leitura);                                 /* Escrita no ficheiro de saída*/
             #ifdef DEBUG
                 printf("\n\n\t->-> %s", leitura);                           /* Debbuging*/
-            #endif // DEBUG
+            #endif
             continue;                                                       /* dar a instrução de "continue" para ignorar o que está em baixo" */
         }
         else if(leitura[0] == '\n'){                                        /* Segundo tipo de leitura */
@@ -220,21 +220,21 @@ void processamento_rota(LISTA * dados_uteis){
         else{                                                               /* Segundo tipo de leitura */
             #ifdef DEBUG
                 printf("\t\t Localidade: %s", leitura);                     /* Debbuging*/
-            #endif // DEBUG
+            #endif
             retirar_paragrafo(leitura);                                     /* remoção do caracter '\n' */
             if(referencia[0] == '\0'){                                      /* verifica se já existe referencia */
                 strcpy(referencia, leitura);                                /* caso não exista, define a referencia com a localidade lida */
             }
             #ifdef DEBUG
                 printf("\t\t\t>> Distancia a calcular - Localidade [%s] - Loc. Referencia [%s]\n", leitura, referencia);     /* Debbuging*/
-            #endif // DEBUG
+            #endif
 
             trajeto = processamento_distancia(dados_uteis, referencia, leitura);                    /* Calculo do valor da distancia entre a referencia e a localidade lida */
             distancia = distancia + trajeto;                                                        /* Adicionar à distancia total da rota */
 
             #ifdef DEBUG
                 printf("\t\t\t>> distancia total %f km\n\n", distancia);                            /* Debbuging*/
-            #endif // DEBUG
+            #endif
 
             fprintf(f_saida, "%s %.2f km\n", leitura, distancia);                                   /* Imprimir no ficheiro de saida a localidade e a distancia à referencia*/
 
@@ -280,7 +280,7 @@ float calculo_distancia(LISTA * dados_uteis, char referencia[], char leitura[]){
 
     #ifdef DEBUG
         printf("\t\t\t>> Em graus:    [%s %.2f %.2f] >-< ref [%s %.2f %.2f]\n", leitura, lat, lon, referencia,  lat_0, lon_0);
-    #endif // DEBUG
+    #endif
 
     conversao_radianos(&lon_0);     /* Conversão para radianos */
     conversao_radianos(&lon);       /* Conversão para radianos */
@@ -289,20 +289,20 @@ float calculo_distancia(LISTA * dados_uteis, char referencia[], char leitura[]){
 
     #ifdef DEBUG
         printf("\t\t\t>> Em radianos: [%s %.2f %.2f] >-< ref [%s %.2f %.2f]\n", leitura, lat, lon, referencia,  lat_0, lon_0);    /* Debbuging*/
-    #endif // DEBUG
+    #endif
 
 
     x = R * cos(lat) * sin(lon - lon_0);                /* Calculo da distancia em x */
 
     #ifdef DEBUG
         printf("\t\t\t\t x = %f\n", x);                     /* Debbuging*/
-    #endif // DEBUG
+    #endif
 
     y = R * (sin(lat - lat_0) / cos(lat - lat_0));      /* Calculo da distancia em y */
 
     #ifdef DEBUG
         printf("\t\t\t\t y = %f\n", y);                     /* Debbuging*/
-    #endif // DEBUG
+    #endif
 
     return sqrt(x * x + y * y);                         /* distancia dada pela raiz quadrada dos quadrados de x e y */
 }
@@ -380,20 +380,20 @@ LISTA * leitura_dados_uteis(){
         printf("********************************************\n");
         printf("*   Primeiro passo - leitura dos dados     *\n");
         printf("********************************************\n\n");
-    #endif // DEBUG
+    #endif
 
     ficheiro = fopen(nome_ficheiro, "r");                                       /* Abertura do ficheiro */
 
     if(ficheiro == NULL){                                                       /* Validação da Abertura do ficheiro */
         #ifdef DEBUG
             printf(">> Abertura do ficheiro %s com erros\n", nome_ficheiro);    /* Debbunging */
-        #endif // DEBUG
+        #endif
         return NULL;                                                            /* Retorna NULL para indicar o erro */
     }
     else{
         #ifdef DEBUG
             printf(">> Abertura correta do ficheiro %s\n\n", nome_ficheiro);    /* Debbunging */
-        #endif // DEBUG
+        #endif
     }
 
     fscanf(ficheiro, "%d", &num_localidades);                                   /* Leitura do numero de localidades a processar*/
@@ -406,7 +406,7 @@ LISTA * leitura_dados_uteis(){
     #ifdef DEBUG
         printf(">> Numero de localidades a serem processadas %d\n", num_localidades);                   /* Debbunging */
         printf(">> Inicio da leitura dos dados\n");                                                     /* Debbunging */
-    #endif // DEBUG
+    #endif
 
     for(i = num_localidades; i > 0; i--){
         leituras = fscanf(ficheiro, "%s %f %f", nome, &latitude, &longitude);                           /* Leitura do nome, latiturde e longitude da localidade */
